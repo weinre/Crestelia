@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crestelia", "source\Crestelia\Crestelia.csproj", "{DF84D390-A3B2-4CB0-A2CD-CC5834A9637B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF84D390-A3B2-4CB0-A2CD-CC5834A9637B}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{DF84D390-A3B2-4CB0-A2CD-CC5834A9637B}.Debug|x64.ActiveCfg = Debug|x64
+		{DF84D390-A3B2-4CB0-A2CD-CC5834A9637B}.Debug|x64.Build.0 = Debug|x64
+		{DF84D390-A3B2-4CB0-A2CD-CC5834A9637B}.Release|Any CPU.ActiveCfg = Release|x64
+		{DF84D390-A3B2-4CB0-A2CD-CC5834A9637B}.Release|x64.ActiveCfg = Release|x64
+		{DF84D390-A3B2-4CB0-A2CD-CC5834A9637B}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1A6A7392-4D05-4D79-9799-150C7BE69D8A}
+	EndGlobalSection
+EndGlobal
