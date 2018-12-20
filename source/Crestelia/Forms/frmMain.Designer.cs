@@ -33,23 +33,23 @@
             this.mnuFile = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuExit = new System.Windows.Forms.ToolStripMenuItem();
             this.fraSettings = new System.Windows.Forms.GroupBox();
-            this.txtFile = new System.Windows.Forms.TextBox();
-            this.numericY = new System.Windows.Forms.NumericUpDown();
-            this.numericX = new System.Windows.Forms.NumericUpDown();
-            this.lblFile = new System.Windows.Forms.Label();
-            this.lblRows = new System.Windows.Forms.Label();
-            this.lblColumns = new System.Windows.Forms.Label();
-            this.lblOutputPath = new System.Windows.Forms.Label();
-            this.txtOutputPAth = new System.Windows.Forms.TextBox();
+            this.btnSplit = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblOutputFormat = new System.Windows.Forms.Label();
             this.txtOutputFormat = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnSplit = new System.Windows.Forms.Button();
+            this.lblOutputPath = new System.Windows.Forms.Label();
+            this.txtOutputPath = new System.Windows.Forms.TextBox();
+            this.lblColumns = new System.Windows.Forms.Label();
+            this.lblRows = new System.Windows.Forms.Label();
+            this.lblFile = new System.Windows.Forms.Label();
+            this.numericX = new System.Windows.Forms.NumericUpDown();
+            this.numericY = new System.Windows.Forms.NumericUpDown();
+            this.txtFile = new System.Windows.Forms.TextBox();
             this.prgProgress = new System.Windows.Forms.ProgressBar();
             this.menuMain.SuspendLayout();
             this.fraSettings.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericY)).BeginInit();
             this.SuspendLayout();
             // 
             // menuMain
@@ -73,7 +73,7 @@
             // mnuExit
             // 
             this.mnuExit.Name = "mnuExit";
-            this.mnuExit.Size = new System.Drawing.Size(152, 22);
+            this.mnuExit.Size = new System.Drawing.Size(92, 22);
             this.mnuExit.Text = "Exit";
             this.mnuExit.Click += new System.EventHandler(this.mnuExit_Click);
             // 
@@ -84,7 +84,7 @@
             this.fraSettings.Controls.Add(this.lblOutputFormat);
             this.fraSettings.Controls.Add(this.txtOutputFormat);
             this.fraSettings.Controls.Add(this.lblOutputPath);
-            this.fraSettings.Controls.Add(this.txtOutputPAth);
+            this.fraSettings.Controls.Add(this.txtOutputPath);
             this.fraSettings.Controls.Add(this.lblColumns);
             this.fraSettings.Controls.Add(this.lblRows);
             this.fraSettings.Controls.Add(this.lblFile);
@@ -99,29 +99,83 @@
             this.fraSettings.TabStop = false;
             this.fraSettings.Text = "Settings";
             // 
-            // txtFile
+            // btnSplit
             // 
-            this.txtFile.Location = new System.Drawing.Point(9, 33);
-            this.txtFile.Name = "txtFile";
-            this.txtFile.Size = new System.Drawing.Size(209, 20);
-            this.txtFile.TabIndex = 3;
+            this.btnSplit.Location = new System.Drawing.Point(224, 32);
+            this.btnSplit.Name = "btnSplit";
+            this.btnSplit.Size = new System.Drawing.Size(93, 23);
+            this.btnSplit.TabIndex = 14;
+            this.btnSplit.Text = "Split Image";
+            this.btnSplit.UseVisualStyleBackColor = true;
+            this.btnSplit.Click += new System.EventHandler(this.btnSplit_Click);
             // 
-            // numericY
+            // label1
             // 
-            this.numericY.Location = new System.Drawing.Point(168, 59);
-            this.numericY.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericY.Name = "numericY";
-            this.numericY.Size = new System.Drawing.Size(50, 20);
-            this.numericY.TabIndex = 4;
-            this.numericY.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.label1.Location = new System.Drawing.Point(6, 162);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(311, 104);
+            this.label1.TabIndex = 13;
+            this.label1.Text = resources.GetString("label1.Text");
+            // 
+            // lblOutputFormat
+            // 
+            this.lblOutputFormat.AutoSize = true;
+            this.lblOutputFormat.Location = new System.Drawing.Point(6, 122);
+            this.lblOutputFormat.Name = "lblOutputFormat";
+            this.lblOutputFormat.Size = new System.Drawing.Size(123, 14);
+            this.lblOutputFormat.TabIndex = 12;
+            this.lblOutputFormat.Text = "Output File Format:";
+            // 
+            // txtOutputFormat
+            // 
+            this.txtOutputFormat.Location = new System.Drawing.Point(9, 139);
+            this.txtOutputFormat.Name = "txtOutputFormat";
+            this.txtOutputFormat.Size = new System.Drawing.Size(209, 20);
+            this.txtOutputFormat.TabIndex = 11;
+            this.txtOutputFormat.Text = "%f-%r-%c.%ext";
+            // 
+            // lblOutputPath
+            // 
+            this.lblOutputPath.AutoSize = true;
+            this.lblOutputPath.Location = new System.Drawing.Point(6, 82);
+            this.lblOutputPath.Name = "lblOutputPath";
+            this.lblOutputPath.Size = new System.Drawing.Size(92, 14);
+            this.lblOutputPath.TabIndex = 10;
+            this.lblOutputPath.Text = "Output Folder:";
+            // 
+            // txtOutputPath
+            // 
+            this.txtOutputPath.Location = new System.Drawing.Point(9, 99);
+            this.txtOutputPath.Name = "txtOutputPath";
+            this.txtOutputPath.Size = new System.Drawing.Size(209, 20);
+            this.txtOutputPath.TabIndex = 9;
+            // 
+            // lblColumns
+            // 
+            this.lblColumns.AutoSize = true;
+            this.lblColumns.Location = new System.Drawing.Point(104, 61);
+            this.lblColumns.Name = "lblColumns";
+            this.lblColumns.Size = new System.Drawing.Size(58, 14);
+            this.lblColumns.TabIndex = 8;
+            this.lblColumns.Text = "Columns";
+            // 
+            // lblRows
+            // 
+            this.lblRows.AutoSize = true;
+            this.lblRows.Location = new System.Drawing.Point(6, 61);
+            this.lblRows.Name = "lblRows";
+            this.lblRows.Size = new System.Drawing.Size(36, 14);
+            this.lblRows.TabIndex = 7;
+            this.lblRows.Text = "Rows";
+            // 
+            // lblFile
+            // 
+            this.lblFile.AutoSize = true;
+            this.lblFile.Location = new System.Drawing.Point(6, 16);
+            this.lblFile.Name = "lblFile";
+            this.lblFile.Size = new System.Drawing.Size(62, 14);
+            this.lblFile.TabIndex = 6;
+            this.lblFile.Text = "File Path:";
             // 
             // numericX
             // 
@@ -140,89 +194,37 @@
             0,
             0});
             // 
-            // lblFile
+            // numericY
             // 
-            this.lblFile.AutoSize = true;
-            this.lblFile.Location = new System.Drawing.Point(6, 16);
-            this.lblFile.Name = "lblFile";
-            this.lblFile.Size = new System.Drawing.Size(62, 14);
-            this.lblFile.TabIndex = 6;
-            this.lblFile.Text = "File Path:";
+            this.numericY.Location = new System.Drawing.Point(168, 59);
+            this.numericY.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericY.Name = "numericY";
+            this.numericY.Size = new System.Drawing.Size(50, 20);
+            this.numericY.TabIndex = 4;
+            this.numericY.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
-            // lblRows
+            // txtFile
             // 
-            this.lblRows.AutoSize = true;
-            this.lblRows.Location = new System.Drawing.Point(6, 61);
-            this.lblRows.Name = "lblRows";
-            this.lblRows.Size = new System.Drawing.Size(36, 14);
-            this.lblRows.TabIndex = 7;
-            this.lblRows.Text = "Rows";
-            // 
-            // lblColumns
-            // 
-            this.lblColumns.AutoSize = true;
-            this.lblColumns.Location = new System.Drawing.Point(104, 61);
-            this.lblColumns.Name = "lblColumns";
-            this.lblColumns.Size = new System.Drawing.Size(58, 14);
-            this.lblColumns.TabIndex = 8;
-            this.lblColumns.Text = "Columns";
-            // 
-            // lblOutputPath
-            // 
-            this.lblOutputPath.AutoSize = true;
-            this.lblOutputPath.Location = new System.Drawing.Point(6, 82);
-            this.lblOutputPath.Name = "lblOutputPath";
-            this.lblOutputPath.Size = new System.Drawing.Size(92, 14);
-            this.lblOutputPath.TabIndex = 10;
-            this.lblOutputPath.Text = "Output Folder:";
-            // 
-            // txtOutputPAth
-            // 
-            this.txtOutputPAth.Location = new System.Drawing.Point(9, 99);
-            this.txtOutputPAth.Name = "txtOutputPAth";
-            this.txtOutputPAth.Size = new System.Drawing.Size(209, 20);
-            this.txtOutputPAth.TabIndex = 9;
-            // 
-            // lblOutputFormat
-            // 
-            this.lblOutputFormat.AutoSize = true;
-            this.lblOutputFormat.Location = new System.Drawing.Point(6, 122);
-            this.lblOutputFormat.Name = "lblOutputFormat";
-            this.lblOutputFormat.Size = new System.Drawing.Size(123, 14);
-            this.lblOutputFormat.TabIndex = 12;
-            this.lblOutputFormat.Text = "Output File Format:";
-            // 
-            // txtOutputFormat
-            // 
-            this.txtOutputFormat.Location = new System.Drawing.Point(9, 139);
-            this.txtOutputFormat.Name = "txtOutputFormat";
-            this.txtOutputFormat.Size = new System.Drawing.Size(209, 20);
-            this.txtOutputFormat.TabIndex = 11;
-            this.txtOutputFormat.Text = "%f%-%r%-%c.%ext%";
-            // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(6, 162);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(311, 104);
-            this.label1.TabIndex = 13;
-            this.label1.Text = resources.GetString("label1.Text");
-            // 
-            // btnSplit
-            // 
-            this.btnSplit.Location = new System.Drawing.Point(224, 32);
-            this.btnSplit.Name = "btnSplit";
-            this.btnSplit.Size = new System.Drawing.Size(93, 23);
-            this.btnSplit.TabIndex = 14;
-            this.btnSplit.Text = "Split Image";
-            this.btnSplit.UseVisualStyleBackColor = true;
-            this.btnSplit.Click += new System.EventHandler(this.btnSplit_Click);
+            this.txtFile.Location = new System.Drawing.Point(9, 33);
+            this.txtFile.Name = "txtFile";
+            this.txtFile.Size = new System.Drawing.Size(209, 20);
+            this.txtFile.TabIndex = 3;
+            this.txtFile.Validated += new System.EventHandler(this.txtFile_Validated);
             // 
             // prgProgress
             // 
             this.prgProgress.Location = new System.Drawing.Point(224, 33);
             this.prgProgress.Name = "prgProgress";
             this.prgProgress.Size = new System.Drawing.Size(93, 22);
+            this.prgProgress.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
             this.prgProgress.TabIndex = 15;
             // 
             // frmMain
@@ -246,8 +248,8 @@
             this.menuMain.PerformLayout();
             this.fraSettings.ResumeLayout(false);
             this.fraSettings.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericY)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericY)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -263,7 +265,7 @@
         private System.Windows.Forms.Label lblOutputFormat;
         private System.Windows.Forms.TextBox txtOutputFormat;
         private System.Windows.Forms.Label lblOutputPath;
-        private System.Windows.Forms.TextBox txtOutputPAth;
+        private System.Windows.Forms.TextBox txtOutputPath;
         private System.Windows.Forms.Label lblColumns;
         private System.Windows.Forms.Label lblRows;
         private System.Windows.Forms.Label lblFile;
