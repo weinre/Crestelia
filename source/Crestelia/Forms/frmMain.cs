@@ -131,7 +131,7 @@ namespace Crestelia.Forms
                             "%t", ((r * cols) + c).ToString());
 
                         Image image = new Image((uint)width, (uint)height);
-                        image.Copy(Resource.Image, 0, 0, new IntRect(c * width, r * height, width, height), true);
+                        image.Copy(Resource.Image, 0, 0, new IntRect(c * width, r * height, width, height));
 
                         image.SaveToFile(txtOutputPath.Text + destName);
                         image?.Dispose();

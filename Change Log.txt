@@ -1,0 +1,5 @@
+~= Version 1.0.1 =~
+- Version numbers are now Major.Minior.Revision.
+- Fixed an error causing transparent pixels to be replaced with solid pixels.
+- Fixed reference to Eltoyelna in the AssemblyInformation.cs file, it now says Crestelia.
+- Removed Eltoyelna build information.
